@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Home</title>
+
+    <!-- Date and Time picker CSS-->
+    <link rel="stylesheet" href="/css/datetime.css">
+    
+    <!-- Icons font CSS-->
+    <link href="fonts/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" media="all">
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+    <!-- MapBox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+
+    <link href="css/datetimeconf.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Smart Parking system</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#balance">My Balance</a></li>
+          <li><a href="#">Add E-Cash</a></li>
+          <li><a href="#">Logout</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    <div class="page-wrapper bg-gra-02 p-t-100 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div id="book_a_slot">
+                <center><h2 style="color: #FFF;">Book Parking Slots :</h2></center>
+            <div class="book-slots">
+                <div class="card-body-slots">
+                    <div style="text-align: center;">
+                        <div style="display: inline;">
+                            <input type="text" class="datepicker" placeholder="Date" >
+                            
+                        </div>
+                        <div style="display:inline-block;">
+                            <input type="text" class="timepicker" placeholder="Time">
+                        </div>
+                        <div style="display: inline;">
+                            <button class="btn btn--radius-2 btn--blue" style="padding-left: 5px; padding-right: 5px;">Book my slot</button>
+                        </div>
+                        <div id='map' style='width: 400px; height: 300px; align-self: center;'></div>
+                        <script>
+                            mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtcGF0aHNhbSIsImEiOiJjanNybDU2ZHAwN3d2NDNwNGUzdzRqNXZ5In0.D4gRrSnSPep_O9Txw55fkQ';
+                            var map = new mapboxgl.Map({
+                                container: 'map',
+                                style: 'mapbox://styles/mapbox/streets-v11',
+                                center: [77.6, 13.0], // starting position
+                                zoom: 9
+                            });
+                            map.addControl(new mapboxgl.NavigationControl());
+                        </script>
+                    </div>
+                </div>
+            </div><br>
+            </div>
+            <div id="parking_history">
+                <center><h2 style="color: #FFF;">Your Parking History :</h2></center>
+            <div class="card card-4">
+                <div class="card-body-slots">
+                    <div>
+                        <label class="label"><h3>Techpark</h3></label>
+                        <label class="label">5:00 PM - 8:00 PM</label>
+                        <label class="label">20 Jan</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="card card-4">
+                <div class="card-body">
+                    <div>
+                        Elements Mall<br><br>
+                        6:00 PM - 7:20 PM<br><br>
+                        Wed 19 Jan
+                    </div>
+                </div>
+            </div><br>
+            <div class="card card-4">
+                <div class="card-body">
+                    <div>
+                        sanky Tank<br><br>
+                        3:25 PM - :400 PM<br><br>
+                        Sat 13 Jan
+                    </div>
+                </div>
+            </div><br>
+
+            </div>
+            <div id="balance">
+                <center><h2 style="color: #FFF;">My Balance :</h2></center>
+            <div class="card card-4">
+                <div class="card-body-slots">
+                    <div>
+                        <label class="label"><h3>Available Rs : 500</h3></label>
+                        <label class="label">Due Rs : 0</label>
+                        <label class="label">20 Jan</label>
+                    </div>
+                </div>
+            </div><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Date and Time picker JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/datetimeconf.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
